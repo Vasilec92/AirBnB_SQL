@@ -1,0 +1,10 @@
+1. В таблице apartments types ENUM('private room', 'entire home') - плюс за применение ENUM, но лучше в единственном числе - type.
+2. Аналогично descriptions -> description.
+3. prix DOUBLE - тип данных с плавающей точкой не рекомендуется применять для столбцов с денежными знчениями, лучше применить DECIMAL.
+4. CONSTRAINT apartments_photo_id_fk FOREIGN KEY (photo_id) REFERENCES photos(id) ON DELETE CASCADE - врядли нужно удалять запись об апартаментах если удалена фотография.
+5. id_guests_number - в общем стиле лучше guests_number_id.
+6. Логика процедуры show_users_check_in_today больше характерна для представлений.
+7. В триггере validate_dates_reservation нужно использовать логическое ИЛИ - OR.
+В целом проект реализован грамотно и соответствует требованиям.
+Отлично поработали!
+Поздравляю с успешным завершением курса!
